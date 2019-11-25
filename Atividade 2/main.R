@@ -80,9 +80,91 @@ c_6 = pbinom(3, size=6, prob=0.5)
 
 # 7
 
+a_7 = dbinom(4, size=30, prob=0.2)
+b_7 = pbinom(2, size=30, prob=0.2, lower.tail=FALSE)
+
+# 8
+
 z = z_func(4000, 200)
 
 aux_0 = z(4250)
 aux_1 = z(3600)
 a_8 = pnorm(aux_0) - pnorm(aux_1)
+
+aux_0 = z(3400)
+b_8 = pnorm(aux_0)
+
+aux_0 = z(4636)
+c_8 = pnorm(aux_0, lower.tail=FALSE)
+
+# d
+
+x = seq(0, 4000*2, length=4000*5)
+y = dnorm(x, mean=4000, sd=200)
+
+# d
+plot(x, y, type="l",
+     lwd=2,
+     col="blue",
+     ylab="Probabilidade",
+     main="Funcao probabilidade")
+
+# 9
+
+a_9 = qnorm(0.04, 1000, 100)
+
+x = seq(0, 1000*2, length=1000*5)
+y = dnorm(x, mean=1000, sd=100)
+
+# d
+plot(x, y, type="l",
+     lwd=2,
+     col="blue",
+     ylab="Probabilidade",
+     main="Funcao probabilidade")
+
+# 10
+
+a_10 = pbinom(3, size=6, prob=0.2, lower.tail=FALSE)
+
+# 11
+
+a_11 = dbinom(3, size=1000, prob=0.001)
+
+# 12
+
+a_12 = dbinom(12, size=30, prob=0.5)
+
+b_12 = pbinom(20, size=30, prob=0.5, lower.tail=FALSE)
+
+# 13
+
+aux_0 = c(0, 0.15, 0.5, 0.2, 0.15)
+aux_1 = 0
+a_13 = c()
+for(i in 1:length(aux_0)) {
+  aux_1 = aux_1 + aux_0[i]
+  a_13[i] = c(qnorm(aux_1, 5, 0.9))
+}
+
+# Resposta da 13 -> Intervalos entre os valores de a_13
+
+# 14
+
+z = z_func(1000, 10)
+
+a_14 = pnorm(z(990))
+
+b_14 = pnorm(z(1020)) - pnorm(z(980))
+
+aux_0 = pnorm(z(1002), lower.tail=FALSE)
+
+c_14 = pbinom(4, size=10, prob=aux_0)
+
+# 15
+
+z = z_func(45, 20)
+
+a_15 = pnorm(z(49), lower.tail=FALSE) + pnorm(z(29))
+a_15 = a_15 * 50
 

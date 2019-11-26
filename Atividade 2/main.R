@@ -168,3 +168,35 @@ z = z_func(45, 20)
 a_15 = pnorm(z(49), lower.tail=FALSE) + pnorm(z(29))
 a_15 = a_15 * 50
 
+# 16
+
+z = z_func(2, 0.01)
+a_16 = pnorm(z(1.97)) + pnorm(z(2.03), lower.tail=FALSE)
+
+#17
+
+a_17 = qnorm(0.05, 8, 1.8)
+
+#18
+
+a_18 = pexp(5, 0.2, lower.tail=FALSE)
+
+b_18 = pexp(4, 0.2)
+
+c_18 = pexp(8, 0.2) - pexp(3,0.2)
+
+# 19
+
+z = z_func(129, 14)
+
+a_19 = pnorm(z(129 + 2*14), lower.tail=FALSE)
+
+b_19 = pnorm(z(100))
+
+c_19 = qnorm(0.95, 129, 14)
+
+d_19 = pnorm(z(199), lower.tail=FALSE)
+# 20
+
+z = z_func(600, 100)
+a_20 = pnorm(z(312)) * 10000
